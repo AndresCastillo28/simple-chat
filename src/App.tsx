@@ -79,7 +79,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://simple-chat-backend-2.onrender.com");
+        const response = await axios.get("https://simple-chat-backend-2.onrender.com/api/messages");
         setMessages(response.data.data);
       } catch (error) {
         console.error("There was an error!", error);
