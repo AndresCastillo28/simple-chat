@@ -40,7 +40,6 @@ interface Message {
   date: string;
 }
 
-const SOCKET_URL = config.apiBaseUrl;
 
 // Establece la conexión con Socket.IO fuera del componente para evitar múltiples conexiones
 const socket = io("https://simple-chat-backend-2.onrender.com");
