@@ -43,7 +43,7 @@ interface Message {
 const SOCKET_URL = config.apiBaseUrl;
 
 // Establece la conexión con Socket.IO fuera del componente para evitar múltiples conexiones
-const socket = io(SOCKET_URL);
+const socket = io("https://simple-chat-backend-2.onrender.com");
 
 function App() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -55,7 +55,7 @@ function App() {
   const messagesEndRef: any = useRef(null);
 
   useEffect(() => {
-    const socket = io(SOCKET_URL);
+    const socket = io("https://simple-chat-backend-2.onrender.com");
 
     socket.on("connect", () => {
       console.log("Connected to Socket.IO server");
