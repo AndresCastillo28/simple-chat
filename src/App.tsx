@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
-import { config } from "./helpers/config";
 import io from "socket.io-client";
 import "./App.css";
 import axios from "axios";
@@ -80,7 +79,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${config.apiBaseUrl}/api/messages`);
+        const response = await axios.get("https://simple-chat-backend-2.onrender.com");
         setMessages(response.data.data);
       } catch (error) {
         console.error("There was an error!", error);
